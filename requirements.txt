@@ -1,0 +1,17 @@
+loguru
+numpy
+pandas
+scikit-learn
+lightgbm
+xgboost
+catboost
+matplotlib
+seaborn
+joblib
+mkdocs
+pip
+python-dotenv
+ruff
+tqdm
+typer
+-e .

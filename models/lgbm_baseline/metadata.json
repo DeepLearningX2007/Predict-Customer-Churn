@@ -1,0 +1,83 @@
+{
+  "model_type": "lgb",
+  "params": {
+    "random_state": 42,
+    "bagging_seed": 42,
+    "feature_fraction_seed": 42,
+    "data_random_seed": 42,
+    "deterministic": true,
+    "force_col_wise": true,
+    "n_estimators": 5000,
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  },
+  "preprocessing": {
+    "target_col": "Churn",
+    "id_cols": [
+      "id"
+    ],
+    "categorical_cols": [
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod"
+    ],
+    "numeric_cols": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges"
+    ],
+    "numeric_medians": {
+      "tenure": 35.0,
+      "MonthlyCharges": 74.1,
+      "TotalCharges": 1433.65
+    },
+    "feature_columns": [
+      "id",
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges",
+      "gender_Male",
+      "SeniorCitizen_1",
+      "Partner_Yes",
+      "Dependents_Yes",
+      "PhoneService_Yes",
+      "MultipleLines_No phone service",
+      "MultipleLines_Yes",
+      "InternetService_Fiber optic",
+      "InternetService_No",
+      "OnlineSecurity_No internet service",
+      "OnlineSecurity_Yes",
+      "OnlineBackup_No internet service",
+      "OnlineBackup_Yes",
+      "DeviceProtection_No internet service",
+      "DeviceProtection_Yes",
+      "TechSupport_No internet service",
+      "TechSupport_Yes",
+      "StreamingTV_No internet service",
+      "StreamingTV_Yes",
+      "StreamingMovies_No internet service",
+      "StreamingMovies_Yes",
+      "Contract_One year",
+      "Contract_Two year",
+      "PaperlessBilling_Yes",
+      "PaymentMethod_Credit card (automatic)",
+      "PaymentMethod_Electronic check",
+      "PaymentMethod_Mailed check"
+    ]
+  }
+}
